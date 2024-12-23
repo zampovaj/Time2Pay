@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Time2Pay" 
         xmlns:controls="clr-namespace:Time2Pay.Controls"
-        Title="Time2Pay" Height="600" Width="1000">
+        Title="Time2Pay" Height="620" Width="1000">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Time2Pay")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0eab5e05065468987268356f856ec110b53861ca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a9c85de6d450c7c9e5baa7e88e623dbb38343b5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Time2Pay")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Time2Pay")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
