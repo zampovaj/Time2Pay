@@ -1,6 +1,6 @@
 ﻿<Window x:Class="Time2Pay.View.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=netstandard"
         Title="Time2Pay" Height="600" Width="1000"
         WindowStartupLocation="CenterScreen">
     <Grid>
@@ -29,55 +29,63 @@
         <!-- Week Grid (Days) -->
         <Grid Grid.Row="1" Margin="10">
             <UniformGrid Rows="1" Columns="7" VerticalAlignment="Stretch">
-                <Border BorderThickness="1" BorderBrush="Black" Background="#f0f0f0" Padding="10">
+                <!-- Monday -->
+                <Border BorderBrush="Black" BorderThickness="1" Padding="5">
                     <StackPanel>
-                        <TextBlock Text="Monday" FontSize="16" FontWeight="Bold" />
-                        <TextBlock Text="Hours: 0" Margin="0,10,0,0" />
-                        <TextBlock Text="Earnings: $0" />
+                        <TextBlock Text="Monday" FontWeight="Bold" Margin="0,0,0,5"/>
+                        <ItemsControl>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Button Content="{Binding}" Padding="5" Margin="2"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                            <ItemsControl.ItemsSource>
+                                <x:Array Type="{x:Type sys:String}">
+                                    <sys:String>10:30 - 11:00</sys:String>
+                                    <sys:String>11:00 - 12:00</sys:String>
+                                    <sys:String>12:00 - 13:00</sys:String>
+                                    <sys:String>13:00 - 14:00</sys:String>
+                                    <sys:String>14:00 - 15:00</sys:String>
+                                    <sys:String>15:00 - 16:00</sys:String>
+                                    <sys:String>16:00 - 17:00</sys:String>
+                                    <sys:String>17:00 - 18:00</sys:String>
+                                    <sys:String>18:00 - 19:00</sys:String>
+                                    <sys:String>19:00 - 20:00</sys:String>
+                                    <sys:String>20:00 - 21:00</sys:String>
+                                    <sys:String>21:00 - 22:15</sys:String>
+                                </x:Array>
+                            </ItemsControl.ItemsSource>
+                        </ItemsControl>
+                        <!-- Hours and Earnings Text -->
+                        <TextBlock Text="Hours: 0" Margin="0,10,0,0" VerticalAlignment="Bottom"/>
+                        <TextBlock Text="Earnings: $0" VerticalAlignment="Bottom"/>
                     </StackPanel>
                 </Border>
+                <!-- Repeat for other days of the week (Tuesday to Sunday) -->
+                <!-- Example for Tuesday: -->
                 <Border BorderThickness="1" BorderBrush="Black" Background="#f0f0f0" Padding="10">
                     <StackPanel>
                         <TextBlock Text="Tuesday" FontSize="16" FontWeight="Bold" />
+                        <ItemsControl>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Button Content="{Binding}" Padding="5" Margin="2"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                            <ItemsControl.ItemsSource>
+                                <x:Array Type="{x:Type sys:String}">
+                                    <!-- Add your time slots here for Tuesday -->
+                                    <sys:String>10:30 - 11:00</sys:String>
+                                    <sys:String>11:00 - 12:00</sys:String>
+                                    <!-- Other time slots... -->
+                                </x:Array>
+                            </ItemsControl.ItemsSource>
+                        </ItemsControl>
                         <TextBlock Text="Hours: 0" Margin="0,10,0,0" />
                         <TextBlock Text="Earnings: $0" />
                     </StackPanel>
                 </Border>
-                <Border BorderThickness="1" BorderBrush="Black" Background="#f0f0f0" Padding="10">
-                    <StackPanel>
-                        <TextBlock Text="Wednesday" FontSize="16" FontWeight="Bold" />
-                        <TextBlock Text="Hours: 0" Margin="0,10,0,0" />
-                        <TextBlock Text="Earnings: $0" />
-                    </StackPanel>
-                </Border>
-                <Border BorderThickness="1" BorderBrush="Black" Background="#f0f0f0" Padding="10">
-                    <StackPanel>
-                        <TextBlock Text="Thursday" FontSize="16" FontWeight="Bold" />
-                        <TextBlock Text="Hours: 0" Margin="0,10,0,0" />
-                        <TextBlock Text="Earnings: $0" />
-                    </StackPanel>
-                </Border>
-                <Border BorderThickness="1" BorderBrush="Black" Background="#f0f0f0" Padding="10">
-                    <StackPanel>
-                        <TextBlock Text="Friday" FontSize="16" FontWeight="Bold" />
-                        <TextBlock Text="Hours: 0" Margin="0,10,0,0" />
-                        <TextBlock Text="Earnings: $0" />
-                    </StackPanel>
-                </Border>
-                <Border BorderThickness="1" BorderBrush="Black" Background="#f0f0f0" Padding="10">
-                    <StackPanel>
-                        <TextBlock Text="Saturday" FontSize="16" FontWeight="Bold" />
-                        <TextBlock Text="Hours: 0" Margin="0,10,0,0" />
-                        <TextBlock Text="Earnings: $0" />
-                    </StackPanel>
-                </Border>
-                <Border BorderThickness="1" BorderBrush="Black" Background="#f0f0f0" Padding="10">
-                    <StackPanel>
-                        <TextBlock Text="Sunday" FontSize="16" FontWeight="Bold" />
-                        <TextBlock Text="Hours: 0" Margin="0,10,0,0" />
-                        <TextBlock Text="Earnings: $0" />
-                    </StackPanel>
-                </Border>
+                <!-- Repeat the same pattern for Wednesday to Sunday -->
             </UniformGrid>
         </Grid>
 

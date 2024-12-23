@@ -17,3 +17,23 @@ C:\Users\johan\Documents\Plocha\PRG\PERSONAL PROJECTS\Time2Pay\Time2Pay\Time2Pay
 C:\Users\johan\Documents\Plocha\PRG\PERSONAL PROJECTS\Time2Pay\Time2Pay\Time2Pay\obj\Debug\net8.0-windows\Time2Pay.pdb
 C:\Users\johan\Documents\Plocha\PRG\PERSONAL PROJECTS\Time2Pay\Time2Pay\Time2Pay\obj\Debug\net8.0-windows\Time2Pay.genruntimeconfig.cache
 C:\Users\johan\Documents\Plocha\PRG\PERSONAL PROJECTS\Time2Pay\Time2Pay\Time2Pay\obj\Debug\net8.0-windows\ref\Time2Pay.dll
+C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\bin\Debug\net8.0-windows\Time2Pay.exe
+C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\bin\Debug\net8.0-windows\Time2Pay.deps.json
+C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\bin\Debug\net8.0-windows\Time2Pay.runtimeconfig.json
+C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\bin\Debug\net8.0-windows\Time2Pay.dll
+C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\bin\Debug\net8.0-windows\Time2Pay.pdb
+C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\obj\Debug\net8.0-windows\View\MainWindow.baml
+C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\obj\Debug\net8.0-windows\View\MainWindow.g.cs
+C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\obj\Debug\net8.0-windows\Time2Pay_MarkupCompile.cache
+C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\obj\Debug\net8.0-windows\Time2Pay.g.resources
+C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\obj\Debug\net8.0-windows\Time2Pay.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\obj\Debug\net8.0-windows\Time2Pay.AssemblyInfoInputs.cache
+C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\obj\Debug\net8.0-windows\Time2Pay.AssemblyInfo.cs
+C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\obj\Debug\net8.0-windows\Time2Pay.csproj.CoreCompileInputs.cache
+C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\obj\Debug\net8.0-windows\Time2Pay.sourcelink.json
+C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\obj\Debug\net8.0-windows\Time2Pay.dll
+C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\obj\Debug\net8.0-windows\refint\Time2Pay.dll
+C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\obj\Debug\net8.0-windows\Time2Pay.pdb
+C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\obj\Debug\net8.0-windows\Time2Pay.genruntimeconfig.cache
+C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\obj\Debug\net8.0-windows\ref\Time2Pay.dll
