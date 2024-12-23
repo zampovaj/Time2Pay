@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\App.xaml
-1-487866684
+2-1686285501
 
-61681522303
+7-939268186
 198-556154604
-View\MainWindow.xaml;
+Controls\DaySchedule.xaml;View\MainWindow.xaml;
 
-False
+True
 
