@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Time2Pay
-build_property.ProjectDir = C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\
+build_property.ProjectDir = C:\Users\johan\source\repos\Time2Pay\Time2Pay\Time2Pay\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

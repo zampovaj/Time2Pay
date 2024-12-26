@@ -12,8 +12,7 @@
     <Folder Include="Model\" />
     <Folder Include="Service\" />
     <Folder Include="Repository\" />
-    <Folder Include="ViewModel\" />
-	  <Folder Include="Controls\"/>
+	  <Folder Include="Controls\" />
   </ItemGroup>
 
 </Project>

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\obj\Debug\net8.0-windows\
+C:\Users\johan\source\repos\Time2Pay\Time2Pay\Time2Pay\obj\Debug\net8.0-windows\
 Time2Pay
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\johan\Source\Repos\Time2Pay\Time2Pay\Time2Pay\App.xaml
+C:\Users\johan\source\repos\Time2Pay\Time2Pay\Time2Pay\App.xaml
 2-1686285501
 
-7-939268186
+8-96170315
 198-556154604
 Controls\DaySchedule.xaml;View\MainWindow.xaml;
 
-True
+False
 

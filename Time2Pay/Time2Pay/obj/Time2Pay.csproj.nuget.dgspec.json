@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\johan\\Source\\Repos\\Time2Pay\\Time2Pay\\Time2Pay\\Time2Pay.csproj": {}
+    "C:\\Users\\johan\\source\\repos\\Time2Pay\\Time2Pay\\Time2Pay\\Time2Pay.csproj": {}
   },
   "projects": {
-    "C:\\Users\\johan\\Source\\Repos\\Time2Pay\\Time2Pay\\Time2Pay\\Time2Pay.csproj": {
+    "C:\\Users\\johan\\source\\repos\\Time2Pay\\Time2Pay\\Time2Pay\\Time2Pay.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\johan\\Source\\Repos\\Time2Pay\\Time2Pay\\Time2Pay\\Time2Pay.csproj",
+        "projectUniqueName": "C:\\Users\\johan\\source\\repos\\Time2Pay\\Time2Pay\\Time2Pay\\Time2Pay.csproj",
         "projectName": "Time2Pay",
-        "projectPath": "C:\\Users\\johan\\Source\\Repos\\Time2Pay\\Time2Pay\\Time2Pay\\Time2Pay.csproj",
+        "projectPath": "C:\\Users\\johan\\source\\repos\\Time2Pay\\Time2Pay\\Time2Pay\\Time2Pay.csproj",
         "packagesPath": "C:\\Users\\johan\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\johan\\Source\\Repos\\Time2Pay\\Time2Pay\\Time2Pay\\obj\\",
         "projectStyle": "PackageReference",
