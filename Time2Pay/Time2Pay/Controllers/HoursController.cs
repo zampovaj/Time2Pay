@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Time2Pay.ViewModel
 {
-    internal class Hours
+    internal class HoursController
     {
     }
 }
