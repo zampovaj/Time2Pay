@@ -409,3 +409,5 @@ obj/
 # Bullshit
 *.cache
 *.AssemblyInfo.cs
+project.nuget.cache
+Time2Pay.csproj.nuget.dgspec.json
