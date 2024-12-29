@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\johan\\Documents\\Plocha\\PRG\\PERSONAL PROJECTS\\Time2Pay\\Time2Pay\\Time2Pay\\Time2Pay.csproj": {}
+    "C:\\Users\\johan\\source\\repos\\Time2Pay\\Time2Pay\\Time2Pay\\Time2Pay.csproj": {}
   },
   "projects": {
-    "C:\\Users\\johan\\Documents\\Plocha\\PRG\\PERSONAL PROJECTS\\Time2Pay\\Time2Pay\\Time2Pay\\Time2Pay.csproj": {
+    "C:\\Users\\johan\\source\\repos\\Time2Pay\\Time2Pay\\Time2Pay\\Time2Pay.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\johan\\Documents\\Plocha\\PRG\\PERSONAL PROJECTS\\Time2Pay\\Time2Pay\\Time2Pay\\Time2Pay.csproj",
+        "projectUniqueName": "C:\\Users\\johan\\source\\repos\\Time2Pay\\Time2Pay\\Time2Pay\\Time2Pay.csproj",
         "projectName": "Time2Pay",
-        "projectPath": "C:\\Users\\johan\\Documents\\Plocha\\PRG\\PERSONAL PROJECTS\\Time2Pay\\Time2Pay\\Time2Pay\\Time2Pay.csproj",
+        "projectPath": "C:\\Users\\johan\\source\\repos\\Time2Pay\\Time2Pay\\Time2Pay\\Time2Pay.csproj",
         "packagesPath": "C:\\Users\\johan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\johan\\Documents\\Plocha\\PRG\\PERSONAL PROJECTS\\Time2Pay\\Time2Pay\\Time2Pay\\obj\\",
+        "outputPath": "C:\\Users\\johan\\source\\repos\\Time2Pay\\Time2Pay\\Time2Pay\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
