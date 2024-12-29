@@ -407,7 +407,13 @@ obj/
 *.db
 
 # Bullshit
+# Ignore build artifacts and intermediate files
+bin/
+obj/
 *.cache
 *.AssemblyInfo.cs
+
+# Ignore NuGet related files
 project.nuget.cache
 Time2Pay.csproj.nuget.dgspec.json
+
