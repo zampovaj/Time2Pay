@@ -10,9 +10,10 @@
 
   <ItemGroup>
     <Folder Include="Model\" />
+    <Folder Include="Utilities\" />
     <Folder Include="Service\" />
     <Folder Include="Repository\" />
-    <Folder Include="ViewModel\" />
+    <Folder Include="Controller\" />
   </ItemGroup>
 
 </Project>
