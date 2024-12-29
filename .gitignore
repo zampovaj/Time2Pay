@@ -405,3 +405,7 @@ obj/
 *.exe
 *.pdb
 *.db
+
+# Bullshit
+*.cache
+*.AssemblyInfo.cs
