@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
 using System.Data.SQLite;
 using System.IO;
 
-namespace CarMate01.Classes
+namespace Time2Pay.Utilities
 {
     internal class DatabaseHelper
     {
