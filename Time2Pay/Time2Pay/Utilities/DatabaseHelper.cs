@@ -10,13 +10,14 @@ namespace Time2Pay.Utilities
 {
     internal class DatabaseHelper
     {
-        private readonly string connectionString;
+        private readonly SQLiteConnection _connection;
+        private readonly TableHelper _tableHelper;
 
         public DatabaseHelper()
         {
-            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "CarMate.db");
-            connectionString = $"Data Source={databasePath};Version=3;";
-            Console.WriteLine($"Database Path: {databasePath}"); // Debug: Check where the database is being created.
+            var database = new Database();
+            _connection = new SQLiteConnection(database.ConnectionString);
+            _tableHelper = new TableHelper(_connection);
             InitializeDatabase();
         }
 
@@ -24,76 +25,20 @@ namespace Time2Pay.Utilities
         {
             try
             {
-                // Check if the database file exists
-                string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "CarMate.db");
-                if (!File.Exists(dbPath))
+                _connection.Open();
+                Console.WriteLine("Connected to the database.");
+
+                // Enable foreign key constraints
+                using (SQLiteCommand pragmaCmd = new SQLiteCommand("PRAGMA foreign_keys = ON;", _connection))
                 {
-                    SQLiteConnection.CreateFile(dbPath);
-                    Console.WriteLine("Database created successfully.");
-                }
-                else
-                {
-                    Console.WriteLine("Database file already exists.");
+                    pragmaCmd.ExecuteNonQuery();
+                    Console.WriteLine("Foreign key constraints enabled.");
                 }
 
-                using (SQLiteConnection conn = new SQLiteConnection(connectionString))
-                {
-                    conn.Open();
-                    Console.WriteLine("Connected to the database.");
+                // Create tables
+                CreateTables();
 
-                    // Enable foreign key constraints
-                    using (SQLiteCommand pragmaCmd = new SQLiteCommand("PRAGMA foreign_keys = ON;", conn))
-                    {
-                        pragmaCmd.ExecuteNonQuery();
-                        Console.WriteLine("Foreign key constraints enabled.");
-                    }
-
-                    // Create tables
-                    ExecuteTableQuery(conn, "Hours", @"
-                        CREATE TABLE IF NOT EXISTS Hours (
-                        Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        Date TEXT NOT NULL,
-                        StartTime TEXT NOT NULL,
-                        EndTime TEXT NOT NULL,
-                        Claimed INTEGER DEFAULT 0
-                    );");
-
-                    ExecuteTableQuery(conn, "Salary", @"
-                        CREATE TABLE IF NOT EXISTS Salary (
-                            Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                            StartDate TEXT NOT NULL,
-                            EndDate TEXT NOT NULL,
-                            PreTaxSalary REAL NOT NULL,
-                            PostTaxSalary REAL NOT NULL,
-                            GasExpenses REAL DEFAULT 0,
-                            Total REAL DEFAULT 0
-                        );");
-
-                    ExecuteTableQuery(conn, "Gas", @"
-                        CREATE TABLE IF NOT EXISTS Gas (
-                            Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                            Date TEXT NOT NULL,
-                            GasExpenses REAL NOT NULL,
-                            VehicleId INTEGER NOT NULL,
-                            SalaryId INTEGER NOT NULL,
-                            FOREIGN KEY (SalaryId) REFERENCES Salary(Id)
-                        );");
-
-                    ExecuteTableQuery(conn, "Multipliers", @"
-                        CREATE TABLE IF NOT EXISTS Multipliers (
-                            Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                            Name TEXT NOT NULL,
-                            Value REAL NOT NULL
-                        );");
-
-                    ExecuteTableQuery(conn, "Settings", @"
-                        CREATE TABLE IF NOT EXISTS Settings (
-                            HourlyWage REAL NOT NULL,
-                            TaxRate REAL NOT NULL
-                        );");
-
-                    Console.WriteLine("Tables initialized.");
-                }
+                Console.WriteLine("Tables initialized.");
             }
             catch (Exception ex)
             {
@@ -101,20 +46,51 @@ namespace Time2Pay.Utilities
             }
         }
 
-        private void ExecuteTableQuery(SQLiteConnection conn, string tableName, string query)
+        private void CreateTables()
         {
-            try
-            {
-                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
-                {
-                    cmd.ExecuteNonQuery();
-                    Console.WriteLine($"Table '{tableName}' created or already exists.");
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error creating table '{tableName}': {ex.Message}");
-            }
+            _tableHelper.CreateTable(TableNames.Hours, $@"
+        CREATE TABLE IF NOT EXISTS {TableNames.Hours} (
+            Id INTEGER PRIMARY KEY AUTOINCREMENT,
+            Date TEXT NOT NULL,
+            StartTime TEXT NOT NULL,
+            EndTime TEXT NOT NULL,
+            Claimed INTEGER DEFAULT 0
+        );");
+
+            _tableHelper.CreateTable(TableNames.Salary, $@"
+        CREATE TABLE IF NOT EXISTS {TableNames.Salary} (
+            Id INTEGER PRIMARY KEY AUTOINCREMENT,
+            StartDate TEXT NOT NULL,
+            EndDate TEXT NOT NULL,
+            PreTaxSalary REAL NOT NULL,
+            PostTaxSalary REAL NOT NULL,
+            GasExpenses REAL DEFAULT 0,
+            Total REAL DEFAULT 0
+        );");
+
+            _tableHelper.CreateTable(TableNames.Gas, $@"
+        CREATE TABLE IF NOT EXISTS {TableNames.Gas} (
+            Id INTEGER PRIMARY KEY AUTOINCREMENT,
+            Date TEXT NOT NULL,
+            GasExpenses REAL NOT NULL,
+            VehicleId INTEGER NOT NULL,
+            SalaryId INTEGER NOT NULL,
+            FOREIGN KEY (SalaryId) REFERENCES {TableNames.Salary}(Id)
+        );");
+
+            _tableHelper.CreateTable(TableNames.Multipliers, $@"
+        CREATE TABLE IF NOT EXISTS {TableNames.Multipliers} (
+            Id INTEGER PRIMARY KEY AUTOINCREMENT,
+            Name TEXT NOT NULL,
+            Value REAL NOT NULL
+        );");
+
+            _tableHelper.CreateTable(TableNames.Settings, $@"
+        CREATE TABLE IF NOT EXISTS {TableNames.Settings} (
+            HourlyWage REAL NOT NULL,
+            TaxRate REAL NOT NULL
+        );");
         }
+
     }
 }
