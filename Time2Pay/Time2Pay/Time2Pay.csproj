@@ -11,6 +11,7 @@
   <ItemGroup>
 	  <Folder Include="Controls\" />
 	  <Folder Include="Model\" />
+	  <Folder Include="Utilities\" />
 	  <Folder Include="Service\" />
 	  <Folder Include="Repository\" />
 	  <Folder Include="View\" />
