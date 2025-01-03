@@ -54,7 +54,7 @@ namespace Time2Pay.Utilities
             Date TEXT NOT NULL,
             StartTime TEXT NOT NULL,
             EndTime TEXT NOT NULL,
-            Claimed INTEGER DEFAULT 0
+            Claimed INTEGER DEFAULT 0,
             SalaryId INTEGER NOT NULL,
             FOREIGN KEY (SalaryId) REFERENCES {TableNames.Salary}(Id)
         );");
