@@ -13,12 +13,23 @@ namespace Time2Pay.Model
         internal class Hours
         {
             private int id;
+            private int salaryId;
             public DateTime Date { get; private set; }
             public TimeSpan StartTime { get; private set; }
             public TimeSpan EndTime { get; private set; }
             public bool Claimed { get; private set; }
 
             public int Id
+            {
+                get => id;
+                set
+                {
+                    if (value < 0)
+                        throw new ArgumentException("Id cannot be negative.");
+                    id = value;
+                }
+            }
+            public int SalaryId
             {
                 get => id;
                 set
